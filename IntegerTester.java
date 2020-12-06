@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 public class IntegerTester {
   public static void main(String[] args) {
     IntegerSequence r = new Range(10, 20);
@@ -24,6 +25,11 @@ public class IntegerTester {
       System.out.println(r2.hasNext());  //false
       System.out.println(r3.hasNext());  //true
       System.out.println(r3.next());     //4
-      System.out.println(r2.next());
+      try {
+        r2.next();
+      } catch (NoSuchElementException e) {
+        System.out.println("There are no NEXT elements");
+        // e.printStackTrace();
+      }
   }
 }
