@@ -27,7 +27,7 @@ public class Range implements IntegerSequence{
   //e.g.  if current is 5. This will make current 6, and return 5.
   public int next() {
     if (!hasNext()) {
-      throw new NoSuchElementException();
+      throw new NoSuchElementException("Current value has no next value");
     }
     int c = current;
     current++;
