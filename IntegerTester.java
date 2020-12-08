@@ -19,7 +19,7 @@ public class IntegerTester {
 
       System.out.println();
       IntegerSequence r3 = new Range(3,7);
-      System.out.println(r3.next());
+      System.out.println(r3.next());   //3
 
       System.out.println(r.length());    //11
       System.out.println(r2.length());   //6
@@ -62,6 +62,17 @@ public class IntegerTester {
       System.out.println("ArraySequence(seq):");
       while(a.hasNext()){
         System.out.print(a.next()+", ");
+      }
+      System.out.println();
+      //Test when current doesnt start at start
+      IntegerSequence r5 = new Range(17,35);
+      r5.next();  //current = 18
+      r5.next();  //current = 19
+      r5.next();  //current = 20
+      IntegerSequence a1 = new ArraySequence(r5);
+      System.out.println("ArraySequence(seq):");
+      while(a1.hasNext()){
+        System.out.print(a1.next()+", ");
       }
       System.out.println();
   }
