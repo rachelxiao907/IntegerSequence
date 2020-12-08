@@ -5,9 +5,13 @@ public class Range implements IntegerSequence{
   //@param start : the starting value (inclusive) which must be <= end.
   //@param end : the ending value which is also inclusive.
   public Range(int start, int end){
-    this.start = start;
-    this.end = end;
-    current = start;
+    if (start <= end) {
+      this.start = start;
+      this.end = end;
+      current = start;
+    } else {
+      throw new IllegalArgumentException("Starting value must be <= end");
+    }
   }
 
   public void reset(){
