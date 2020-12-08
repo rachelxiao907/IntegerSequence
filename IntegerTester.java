@@ -28,8 +28,14 @@ public class IntegerTester {
       try {
         r2.next();
       } catch (NoSuchElementException e) {
-        System.out.println("There are no NEXT elements");
-        // e.printStackTrace();
+        System.out.println("There are no NEXT elements!!!");
+        e.printStackTrace();
+      }
+      try {
+        IntegerSequence r4 = new Range(9, 4);
+      } catch (IllegalArgumentException e) {
+        System.out.println("\nStart value is too big!!!");
+        e.printStackTrace();
       }
   }
 }
