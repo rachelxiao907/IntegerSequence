@@ -54,5 +54,15 @@ public class IntegerTester {
         System.out.println("\nNO more values!!");
         e.printStackTrace();
       }
+      as.reset();
+      System.out.println(as.next());  // 1
+      //Range constructing ArraySequence
+      IntegerSequence rg = new Range(10,20);
+      IntegerSequence a = new ArraySequence(rg);
+      System.out.println("ArraySequence(seq):");
+      while(a.hasNext()){
+        System.out.print(a.next()+", ");
+      }
+      System.out.println();
   }
 }
