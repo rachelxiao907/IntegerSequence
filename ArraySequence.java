@@ -11,4 +11,25 @@ public class ArraySequence implements IntegerSequence{
     }
     currentIndex = 0;
   }
+
+  public void reset() {
+    currentIndex = 0;
+  }
+
+  public int length() {
+    return data.length;
+  }
+
+  public boolean hasNext() {
+    return currentIndex < data.length;
+  }
+
+  public int next() {
+    if (!hasNext()) {
+      throw new NoSuchElementException("There is no next value");
+    }
+    currentIndex++;
+    return currentIndex[currentIndex - 1];
+  }
+
 }
