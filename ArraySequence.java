@@ -29,7 +29,7 @@ public class ArraySequence implements IntegerSequence{
       throw new NoSuchElementException("There is no next value");
     }
     currentIndex++;
-    return currentIndex[currentIndex - 1];
+    return data[currentIndex - 1];
   }
 
 }
